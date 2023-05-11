@@ -1,0 +1,13 @@
+
+import type { AppRouteModule } from '/@/router/types';
+
+<% chooseModules.forEach(function(item){%>
+import <%=item %> from '<%=deelRouteName(item) %>';
+<% }) %>
+const routes: AppRouteModule[] = [
+  <% chooseModules.forEach(function(item){%>
+    <%=item %>,
+  <% }) %>
+]
+
+export default routes;
